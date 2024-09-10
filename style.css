@@ -1,0 +1,58 @@
+.responsive-nav{
+    background-color: #333;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    
+    
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color:white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li{
+    margin-right: 20px;
+}
+
+/* Responsive designs */
+
+@media(max-width:768px){
+    .menu-toggle{
+        display: block;
+    }
+
+
+#menu{
+    display: none;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#menu.show{
+    display: flex;
+}
+
+}
